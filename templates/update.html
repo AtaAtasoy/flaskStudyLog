@@ -1,51 +1,15 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<style>
-body, html {
-    margin: 0;
-    font-family: sans-serif;
-}
 
-.content {
-    margin: 0 auto;
-    width: 400px;
-}
-
-table, td, th {
-    border: 1px solid #aaa;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th {
-    height: 30px;
-}
-
-td {
-    text-align: center;
-    padding: 5px;
-}
-
-.form {
-    margin-top: 20px;
-}
-
-#content {
-    width: 70%;
-}
-</style>
 {% endblock %}
 
 {% block body %}
 <div class="content">
     <h1 style="text-align: center">Update Task</h1>
 
-    <form action="/update/{{task.id}}" method="POST">
-        <input type="text" name="content" id="content" value="{{task.content}}">
+    <form action="/edit/{{subject.id}}" method="POST">
+        <input type="text" name="content" id="content" value="{{subject.content}}">
         <input type="submit" value="Update">
 
     </form>
